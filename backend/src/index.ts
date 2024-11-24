@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import jwt from 'fastify-jwt';
 
 // Importar rotas
-// import { authRoutes } from './routes/auth'; 
+import authRoutes from './routes/auth';
 // import { registerRoutes } from './routes/register'; 
 // import { protectedRoutes } from './routes/protected'; 
 
@@ -28,7 +28,7 @@ server.register(jwt, {
 });
 
 // Registrar rotas de autenticação
-// server.register(authRoutes);
+server.register(authRoutes);
 // server.register(registerRoutes); // Opcional
 // server.register(protectedRoutes); // Opcional
 
