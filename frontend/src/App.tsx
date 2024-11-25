@@ -17,6 +17,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { AuthContext } from './contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import Dashboard from './components/Layout/Dashboard';
+
 function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -36,7 +37,8 @@ function App() {
   };
 
   return (
-    <Container component="main" maxWidth="xs" className="h-screen flex items-center justify-center">
+    <div className="h-screen flex items-center justify-center">
+    <Container component="main" maxWidth="xs" className="flex items-center justify-center h-full">
       <CssBaseline />
       <Paper 
         elevation={3} 
@@ -202,6 +204,7 @@ function App() {
         </Box>
       </Paper>
     </Container>
+    </div>
   );
 }
 
