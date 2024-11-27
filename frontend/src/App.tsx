@@ -16,7 +16,8 @@ import {
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { AuthContext } from './contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import Dashboard from './components/Layout/Dashboard';
+// import Dashboard from './components/Layout/Dashboard';
+
 function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

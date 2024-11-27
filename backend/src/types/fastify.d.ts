@@ -1,13 +1,4 @@
-
-// import { FastifyJWT } from 'fastify-jwt';
-// import 'fastify';
-
-// declare module 'fastify' {
-//     interface FastifyInstance {
-//         jwt: FastifyJWT;
-//     }
-// }
-// src/types/fastify.d.ts
+// backend/src/types/fastify.d.ts
 
 import { PrismaClient } from '@prisma/client';
 import { JWT } from '@fastify/jwt';
@@ -19,8 +10,8 @@ declare module 'fastify' {
   }
 
   interface FastifyRequest {
-    user: {
-      userId: string;
+    user?: {
+      userId: number;
       email: string;
     };
   }
@@ -30,3 +21,5 @@ declare module 'fastify' {
     badRequest(error?: string): FastifyReply;
   }
 }
+
+export {};

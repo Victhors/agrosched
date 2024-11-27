@@ -34,55 +34,59 @@ const Login: React.FC = () => {
   };
 
 return (
-    <Container maxWidth="sm" className="mt-10">
-        {/* Page heading */}
-        <Typography variant="h4">Login</Typography>
-        
-        {/* Login form */}
-        <form onSubmit={handleLogin}>
-            {/* Email input field */}
-            <TextField
-                label="Email"
-                variant="outlined"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                fullWidth
-                margin="normal"
-                required
-            />
-            
-            {/* Password input field */}
-            <TextField
-                label="Password"
-                type="password"
-                variant="outlined"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                fullWidth
-                margin="normal"
-                required
-            />
-            
-            {/* Login button */}
-            <Button
-                type="submit" 
-                variant="contained"
-                color="primary"
-                fullWidth
-                disabled={!email || !password}
-            >
-                Login
-            </Button>
-        </form>
-        
-        {/* Error message display */}
-        {error && (
-            <Typography color="error" variant="body2">
-                {error}
-            </Typography>
-        )}
-    </Container>
+  <Container 
+    maxWidth="sm" 
+    className="mt-10" 
+    style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100vh' }}
+  >
+    {/* Page heading */}
+    <Typography variant="h4" align="center">Login</Typography>
+    
+    {/* Login form */}
+    <form onSubmit={handleLogin}>
+      {/* Email input field */}
+      <TextField
+        label="Email"
+        variant="outlined"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        fullWidth
+        margin="normal"
+        required
+      />
+      
+      {/* Password input field */}
+      <TextField
+        label="Password"
+        type="password"
+        variant="outlined"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        fullWidth
+        margin="normal"
+        required
+      />
+      
+      {/* Login button */}
+      <Button
+        type="submit" 
+        variant="contained"
+        color="primary"
+        fullWidth
+        disabled={!email || !password}
+      >
+        Login
+      </Button>
+    </form>
+    
+    {/* Error message display */}
+    {error && (
+      <Typography color="error" variant="body2">
+        {error}
+      </Typography>
+    )}
+  </Container>
 );
 }
 
